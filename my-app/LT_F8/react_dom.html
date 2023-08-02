@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+  </head>
+  <body>
+
+    <div id="root"></div>
+    <script>
+      //BT F8
+      //   const divDOM = document.createElement("div");
+      //   const h2DOM = document.createElement("h2");
+      //   h2DOM.title = "Học React F8";
+      //   h2DOM.innerText = "Học React";
+      //   const pDOM = document.createElement("p");
+      //   pDOM.innerText = "Học React từ cơ bản đến nâng cao";
+
+      //   divDOM.appendChild(h2DOM);
+      //   divDOM.appendChild(pDOM);
+      //   document.body.appendChild(divDOM);
+
+      //React
+      const PostReact = React.createElement(
+        "div",
+        {
+          className: "class-btn",
+        },
+        React.createElement("h2", { title: "Học React tại f8" }, "Học ReactJS"),
+        React.createElement("p", null, "Học React từ cơ bản đến nâng cao")
+      );
+    //   console.log(PostReact);
+
+      //Get root element
+      const container = document.getElementById('root')
+      //React@17
+      //React-DOM -> render UI
+      // ReactDOM.render(PostReact, root)
+
+      //React@18
+      const root = ReactDOM.createRoot(container)
+      root.render(PostReact)
+    </script>
+  </body>
+</html>
